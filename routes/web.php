@@ -15,7 +15,7 @@ use App\Http\Controllers\TeachersCourseController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 
 Route::resource('/profesores_cursos', TeachersCourseController::class);
