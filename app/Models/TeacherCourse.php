@@ -16,6 +16,7 @@ class TeacherCourse extends Model
         'seccion',
         //'rol_id',
         'nivel',
+        'estado',
         'observation',
     ];
 

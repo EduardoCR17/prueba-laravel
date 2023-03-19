@@ -83,7 +83,8 @@ class TeachersCourseController extends Controller
             'n_students' => 'required',
             'seccion' => 'required',
             'nivel' => 'nullable',
-            'observation' => 'required'
+            'estado' => 'required',
+            'observation' => 'nullable'
         ]);
 
         $teacher_course = TeacherCourse::find($id);
@@ -92,6 +93,7 @@ class TeachersCourseController extends Controller
         $teacher_course->n_students = $request->input('n_students');
         $teacher_course->seccion = $request->input('seccion');
         $teacher_course->nivel = $request->input('nivel');
+        $teacher_course->estado = $request->input('estado');
         $teacher_course->observation = $request->input('observation');
         $teacher_course->save();
 

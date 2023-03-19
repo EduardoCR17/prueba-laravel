@@ -86,6 +86,19 @@
     </div>
 
     <div class="mb-3 row">
+        <label for="nivel" class="col-sm-2 col-form-label">ESTADO:</label>
+        <div class="col-sm-5">
+            <select name="estado" id="nivel" class="form-select" required>
+                <option value="">Selecionar estado</option>                       
+                <option value="0" @if (0 == $teacher_course->estado) {{'selected'}}@endif>ACTIVO</option>
+                <option value="1" @if (1 == $teacher_course->estado) {{'selected'}}@endif>INACTIVO</option>
+                                   
+            
+                </select>
+        </div>
+    </div>
+
+    <div class="mb-3 row">
         <label for="observation" class="col-sm-2 col-form-label">OBSERVACIÓN:</label>
         <div class="col-sm-5">
             <input type="text" class="form-control" name="observation" id="observation" value="{{ $teacher_course->observation}}">
