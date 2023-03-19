@@ -37,6 +37,7 @@ class TeachersCourseController extends Controller
             'n_students' => 'required',
             'seccion' => 'required',
             'nivel' => 'nullable',
+            'observation' => 'required',
             'observation' => 'required'
         ]);
 
@@ -47,6 +48,7 @@ class TeachersCourseController extends Controller
         $teacher_course->seccion = $request->input('seccion');
         $teacher_course->nivel = $request->input('nivel');
         $teacher_course->observation = $request->input('observation');
+        $teacher_course->estado = $request->input('estado');
         $teacher_course->save();
 
         return view("teachers_courses.message", ["msg"=>"Registro guardado"]);
@@ -83,8 +85,9 @@ class TeachersCourseController extends Controller
             'n_students' => 'required',
             'seccion' => 'required',
             'nivel' => 'nullable',
-            'estado' => 'required',
-            'observation' => 'nullable'
+            
+            'observation' => 'nullable',
+            'estado' => 'required'
         ]);
 
         $teacher_course = TeacherCourse::find($id);

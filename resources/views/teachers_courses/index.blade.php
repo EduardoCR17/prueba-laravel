@@ -20,6 +20,7 @@
             <th>SECCION</th>
             <th>NIVEL</th>
             <th>OBSERVACIÓN</th>
+            <th>ESTADO</th>
             <th></th>
             <th></th>
         </tr>
@@ -35,6 +36,7 @@
             <td>{{ $teacher_course->seccion}}</td>
             <td>{{ $teacher_course->nivel}}</td>
             <td>{{ $teacher_course->observation}}</td>
+            <td>@if ($teacher_course->estado== '0') {{'ACTIVO'}} @elseif ($teacher_course->estado== '1') {{'INACTIVO'}}@endif </td>
             <td><a href="{{ url('profesores_cursos/'.$teacher_course->id.'/edit')}}" class="btn btn-warning btn-sm">Editar</a></td>
             <td>
                 <form action="{{ url('profesores_cursos/'.$teacher_course->id)}}" method="post">
