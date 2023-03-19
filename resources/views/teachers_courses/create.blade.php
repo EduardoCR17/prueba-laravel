@@ -93,9 +93,9 @@
     </div>
 
     <div class="mb-3 row">
-        <label for="nivel" class="col-sm-2 col-form-label">ESTADO:</label>
+        <label for="estado" class="col-sm-2 col-form-label">ESTADO:</label>
         <div class="col-sm-5">
-            <select name="estado" id="nivel" class="form-select" required>
+            <select name="estado" id="estado" class="form-select" required>
                 <option value="">Selecionar estado</option>                       
                 <option value="0">ACTIVO</option>
                 <option value="1">INACTIVO</option>
